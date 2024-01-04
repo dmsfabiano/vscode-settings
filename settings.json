@@ -1,0 +1,132 @@
+{
+  "workbench.colorTheme": "Tokyo (Dark)",
+  "editor.fontSize": 12,
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "prettier.printWidth": 100,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "workbench.productIconTheme": "material-product-icons",
+  "editor.lineNumbers": "relative",
+  "editor.formatOnSave": true,
+  "editor.suggest.insertMode": "replace",
+  "terminal.integrated.fontFamily": "CaskaydiaMono Nerd Font",
+  "editor.fontFamily": "CaskaydiaMono Nerd Font",
+  // vim configs
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.useCtrlKeys": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // NICE TO HAVE
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["g", "d"],
+      "commannds": ["editor.action.goToSourceDefinition"]
+    }
+    // FILE TREE
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-y>": false
+  },
+  "leetcode.workspaceFolder": "/home/dmsfabiano/personal/",
+  "leetcode.defaultLanguage": "python3",
+  "leetcode.useWsl": true,
+  "leetcode.filePath": {
+    "default": {
+      "folder": "leetcode/",
+      "filename": "${id}.${kebab-case-name}.${ext}"
+    }
+  },
+  "files.exclude": {
+    "**/*.egg-info": true,
+    "**/*.pyc": true,
+    "**/.DS_Store": true,
+    "**/.cache": true,
+    "**/.files": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.idea": true,
+    "**/.ipynb_checkpoints": true,
+    "**/.mypy_cache": true,
+    "**/.offline-package-cache": true,
+    "**/.pytest_cache": true,
+    "**/.ropeproject": true,
+    "**/.runs": true,
+    "**/.svn": true,
+    "**/.temp": true,
+    "**/.tox": true,
+    "**/CVS": true,
+    "**/__pycache__": true,
+    "**/access.log": true,
+    "**/build": true,
+    "**/error.log": true,
+    "**/node_modules": true,
+    "*/.coverage": true,
+    "*/coverage.xml": true,
+    "*/dist": true,
+    "**/.ruff_cache": true,
+    "**.github": true
+  },
+  "git.autofetch": true,
+  "remote.autoForwardPortsSource": "hybrid"
+}
