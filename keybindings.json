@@ -15,6 +15,15 @@
     "key": "ctrl+shift+j",
     "command": "workbench.action.togglePanel"
   },
+
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
   {
     "key": "ctrl+shift+n",
     "command": "workbench.action.terminal.new",
@@ -49,11 +58,6 @@
     "key": "shift+n",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus"
-  },
-  {
-    "key": "shift+n",
-    "command": "workbench.action.newWindow",
-    "when": "!explorerViewletFocus"
   },
   {
     "command": "deleteFile",
