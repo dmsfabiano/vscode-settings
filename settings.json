@@ -13,7 +13,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "prettier.printWidth": 100,
+  "prettier.resolveGlobalModules": true,
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": false,
   "workbench.productIconTheme": "material-product-icons",
@@ -53,6 +58,16 @@
       "before": ["leader", "l"],
       "commands": ["workbench.action.focusRightGroup"]
     },
+
+    // swap files between panes
+    {
+      "before": ["leader", "H"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    },
+    {
+      "before": ["leader", "L"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
     // NICE TO HAVE
     {
       "before": ["<leader>", "c", "a"],
@@ -65,11 +80,15 @@
     { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
     {
       "before": ["g", "h"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["g", "H"],
       "commands": ["editor.action.peekDefinition"]
     },
     {
       "before": ["g", "d"],
-      "commannds": ["editor.action.goToSourceDefinition"]
+      "commands": ["editor.action.revealDefinition"]
     }
     // FILE TREE
   ],
@@ -128,5 +147,9 @@
     "**.github": true
   },
   "git.autofetch": true,
-  "remote.autoForwardPortsSource": "hybrid"
+  "remote.autoForwardPortsSource": "hybrid",
+  "security.workspace.trust.untrustedFiles": "open",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
